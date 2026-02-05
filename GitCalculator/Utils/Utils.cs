@@ -7,7 +7,7 @@ namespace Calculator.Utils
 {
 	public static class Utils
 	{
-		// add comment here
+		// converting inputted text to data
 		private static int executeExpression(string text)
 		{
 			string number = new DataTable().Compute(text, "").ToString();
@@ -16,7 +16,7 @@ namespace Calculator.Utils
 			return Convert.ToInt16(numberDouble);
 		}
 
-		// add comment here
+		// valdiation code
 		private static bool isNumeric(char character)
 		{
 			return int.TryParse(character.ToString(), out _);
@@ -52,7 +52,7 @@ namespace Calculator.Utils
 			}
 		}
 
-		// add comment here
+		// opperation for handling clicks
 		public static void handleOperationClick(string operation)
 		{
 			TextBlock primaryDisplay = MainPage.mainPage.primaryDisplay;
@@ -76,14 +76,14 @@ namespace Calculator.Utils
 			}
 		}
 
-		// add comment here
+		// clear button to remove inputted text
 		public static void handleClearButtonClick()
 		{
 			MainPage.mainPage.primaryDisplay.Text = "";
 			MainPage.mainPage.secondaryDisplay.Text = "";
 		}
 
-		// add comment here
+		// equal button to calculate inputted data
 		public static void handleEqualButtonClick()
 		{
 			TextBlock primaryDisplay = MainPage.mainPage.primaryDisplay;
@@ -105,7 +105,7 @@ namespace Calculator.Utils
 			}
 		}
 
-		// add comment here
+		// back option for removing text by 1
 		public static void handleBackspace()
 		{
 			TextBlock primaryDisplay = MainPage.mainPage.primaryDisplay;
