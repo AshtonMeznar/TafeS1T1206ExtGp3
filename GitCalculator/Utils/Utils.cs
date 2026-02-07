@@ -7,13 +7,12 @@ namespace Calculator.Utils
 {
 	public static class Utils
 	{
-		// converting inputted text to data
+		// uses inputted data for equation, returns results
 		private static int executeExpression(string text)
 		{
-			string number = new DataTable().Compute(text, "").ToString();
-			double numberDouble = Convert.ToDouble(number);
+			string result = new DataTable().Compute(text, "").ToString();
 
-			return Convert.ToInt16(numberDouble);
+			return Convert.ToDouble(result);
 		}
 
 		// valdiation code
@@ -92,7 +91,7 @@ namespace Calculator.Utils
 
 			try
 			{
-				primaryDisplay.Text = executeExpression(primaryDisplay.Text + secondaryDisplay.Text).ToString();  //
+				primaryDisplay.Text = executeExpression(secondaryDisplay.Text + primaryDisplay.Text).ToString();  //
 
 				if (primaryDisplay.Text.Length > 6)
 					primaryDisplay.FontSize = 48;
