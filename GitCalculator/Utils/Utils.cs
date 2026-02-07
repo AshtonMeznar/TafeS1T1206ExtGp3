@@ -8,10 +8,9 @@ namespace Calculator.Utils
 	public static class Utils
 	{
 		// uses inputted data for equation, returns results
-		private static int executeExpression(string text)
+		private static double executeExpression(string text)
 		{
 			string result = new DataTable().Compute(text, "").ToString();
-
 			return Convert.ToDouble(result);
 		}
 
