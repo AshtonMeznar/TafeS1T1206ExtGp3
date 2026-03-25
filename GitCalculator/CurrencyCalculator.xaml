@@ -52,6 +52,12 @@
                     FontSize="18"
                     Click="Convert_Click"/>
 
+			<!-- Exit Button -->
+			<Button Content="Exit"
+					Height="45"
+					FontSize="18"
+					Click="Exit_Click"/>
+
 			<!-- Result -->
 			<TextBlock x:Name="ResultText"
                        FontSize="22"
