@@ -31,6 +31,11 @@ namespace Calculator
 		{
 			Frame.Navigate(typeof(CurrencyCalculator));
 		}
+
+		private void tripCalcButton_Click(object sender, RoutedEventArgs e)
+		{
+			messageDisplayTextBlock.Text = "Trip calculator C# code will be developed later.";
+		}
 	}
 }
 
